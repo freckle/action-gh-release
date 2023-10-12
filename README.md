@@ -21,6 +21,11 @@
 
 <br />
 
+> **NOTE**: this is a fork of `softprops/action-gh-release`. We've opened a few
+> issues to no response, so we're picking up development here. The `v2` branch
+> and `v2.0.0` tag are our first release. It contains no breaking changes from
+> the `v1` branch of upstream.
+
 ## 🤸 Usage
 
 ### 🚥 Limit releases to pushes to tags
