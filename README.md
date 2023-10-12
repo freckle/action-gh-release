@@ -1,25 +1,9 @@
-<div align="center">
-  📦 :octocat:
-</div>
-<h1 align="center">
-  action gh-release
-</h1>
+# action gh-release
 
-<p align="center">
-   A GitHub Action for creating GitHub Releases on Linux, Windows, and macOS virtual environments
-</p>
+[![CI](https://github.com/freckle/action-gh-release/workflows/main.yml/badge.svg)](https://github.com/freckle/action-gh-release/workflows/main.yml)
 
-<div align="center">
-  <img src="demo.png"/>
-</div>
-
-<div align="center">
-  <a href="https://github.com/softprops/action-gh-release/actions">
-		<img src="https://github.com/softprops/action-gh-release/workflows/Main/badge.svg"/>
-	</a>
-</div>
-
-<br />
+A GitHub Action for creating GitHub Releases on Linux, Windows, and macOS
+virtual environments
 
 > **NOTE**: this is a fork of `softprops/action-gh-release`. We've opened a few
 > issues to no response, so we're picking up development here. The `v2` branch
@@ -48,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: freckle/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
 ```
 
@@ -69,7 +53,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: freckle/action-gh-release@v2
 ```
 
 ### ⬆️ Uploading release assets
@@ -99,7 +83,7 @@ jobs:
       - name: Test
         run: cat Release.txt
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: freckle/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: Release.txt
@@ -123,7 +107,7 @@ jobs:
       - name: Test
         run: cat Release.txt
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: freckle/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
@@ -155,7 +139,7 @@ jobs:
       - name: Generate Changelog
         run: echo "# Good things have arrived" > ${{ github.workspace }}-CHANGELOG.txt
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: freckle/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           body_path: ${{ github.workspace }}-CHANGELOG.txt
@@ -179,7 +163,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: create
-        uses: softprops/action-gh-release@v1
+        uses: freckle/action-gh-release@v2
         with:
           tag_name: "..."
           draft: true
@@ -191,7 +175,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # build the thing...
-      - uses: softprops/action-gh-release@v1
+      - uses: freckle/action-gh-release@v2
         with:
           id: ${{ needs.create.outputs.release_id }}
           files: "..."
@@ -200,7 +184,7 @@ jobs:
     needs: create
     runs-on: ubuntu-latest
     steps:
-      - uses: softprops/action-gh-release@v1
+      - uses: freckle/action-gh-release@v2
         with:
           id: ${{ needs.create.outputs.release_id }}
           draft: false
@@ -280,4 +264,7 @@ permissions:
 
 [GitHub token permissions](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token) can be set for an individual job, workflow, or for Actions as a whole.
 
-Doug Tangren (softprops) 2019
+---
+
+- Freckle Engineering 2023 (v2+)
+- Doug Tangren (softprops) 2019 (v1)
