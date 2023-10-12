@@ -1,6 +1,6 @@
 # action gh-release
 
-[![CI](https://github.com/freckle/action-gh-release/workflows/main.yml/badge.svg)](https://github.com/freckle/action-gh-release/workflows/main.yml)
+[![Main](https://github.com/freckle/action-gh-release/actions/workflows/main.yml/badge.svg)](https://github.com/freckle/action-gh-release/actions/workflows/main.yml)
 
 A GitHub Action for creating GitHub Releases on Linux, Windows, and macOS
 virtual environments
