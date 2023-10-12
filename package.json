@@ -1,6 +1,6 @@
 {
   "name": "action-gh-release",
-  "version": "0.1.15",
+  "version": "0.0.0",
   "private": true,
   "description": "GitHub Action for creating GitHub Releases",
   "main": "lib/main.js",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/softprops/action-gh-release.git"
+    "url": "git+https://github.com/freckle/action-gh-release.git"
   },
   "keywords": [
     "actions"
   ],
-  "author": "softprops",
+  "author": "Freckle Engineering",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
