@@ -1,0 +1,10 @@
+restylers:
+  - "!clang-format"
+  - prettier:
+      include:
+        - "src/**/*.ts"
+  - whitespace:
+      include:
+        - "**/*"
+        - "!dist/index.js"
+  - "*"
