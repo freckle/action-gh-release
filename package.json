@@ -20,7 +20,7 @@
   "author": "Freckle Engineering",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@actions/github": "^5.1.1",
+    "@actions/github": "^6.0.0",
     "@octokit/plugin-retry": "^4.0.3",
     "@octokit/plugin-throttling": "^8.1.3",
     "glob": "^10.3.15",
